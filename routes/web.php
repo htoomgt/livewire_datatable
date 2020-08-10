@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@landingPage');
+
+Route::get('faked_person_list', 'FakedPersonController@index');
+
+Route::get('partial_person_list', 'FakedPersonController@partialPersonList');
